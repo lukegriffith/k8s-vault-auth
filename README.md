@@ -118,7 +118,7 @@ $ vault write -f auth/approle/role/kv_role/secret-id
 #
 ```
 
-# Brining it together
+## Brining it together
 
 Now we have the ability to create a one time use vault token for the kv_role_gen policy, this will allow a one time creation for a secret ID.
 
