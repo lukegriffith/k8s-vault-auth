@@ -118,7 +118,7 @@ $ vault write -f auth/approle/role/kv_role/secret-id
 #
 ```
 
-# brining it together
+# Brining it together
 
 Now we have the ability to create a one time use vault token for the kv_role_gen policy, this will allow a one time creation for a secret ID.
 
@@ -164,3 +164,8 @@ vault write -f auth/approle/role/kv_role/secret-id
 # secret_id_accessor    42e65508-bf79-fc8f-d94d-b58f7e58b5f1
 
 ```
+
+Now the container has a AuthN and AuthZ to the kv/* backend in vault, the secret_id has never crossed the network or left the memory of the container.
+
+### Notes
+hardening - encrypted swap
